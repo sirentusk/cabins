@@ -9,11 +9,11 @@
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <label for="cabinType">Cabin Type:</label><br>
     <select id="cabinType" name="cabinType" required>
-        <option value="Standard cabin">Standard cabin – sleeps 4</option>
-        <option value="Standard open plan cabin">Standard open plan cabin – sleeps 4</option>
-        <option value="Deluxe cabin">Deluxe cabin – sleeps 4</option>
-        <option value="Villa">Villa – sleeps 4</option>
-        <option value="Spa villa">Spa villa – sleeps 4</option>
+        <option value="Standard cabin">Standard cabin</option>
+        <option value="Standard open plan cabin">Standard open plan cabin</option>
+        <option value="Deluxe cabin">Deluxe cabin</option>
+        <option value="Villa">Villa</option>
+        <option value="Spa villa">Spa villa</option>
         <option value="Slab powered site">Slab powered site</option>
     </select><br>
 
