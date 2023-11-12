@@ -1,44 +1,33 @@
 <?php
-
-// Parse the database URL from the environment variable
-$db = parse_url(getenv("DATABASE_URL"));
-
-// Set up the database connection using PDO
-$pdo = new PDO("pgsql:" . sprintf(
-    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-    $db['host'],
-    $db['port'],
-    $db['user'],
-    $db['pass'],
-    ltrim($db['path'], '/')
-));
-
-// Set error mode to exceptions
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Assuming the database connection is already set up in this file or included from another file
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect the form data
-    $cabinType = $_POST['cabinType']; // This will now contain the value from the dropdown
+    $cabinType = $_POST['cabinType'];
     $description = $_POST['description'];
     $pricePerNight = $_POST['pricePerNight'];
     $pricePerWeek = $_POST['pricePerWeek'];
+    $inclusions = $_POST['inclusions']; // This is an array of selected inclusions
 
-    // You can now use the $pdo object to perform database operations
-    // For example, to insert the form data into the database:
-    // $sql = "INSERT INTO cabins (cabin_type, description, price_per_night, price_per_week) VALUES (?, ?, ?, ?)";
-    // $stmt = $pdo->prepare($sql);
-    // $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek]);
+    // Perform database operations
+    // For example, to insert the form data into the cabins table:
+    $sql = "INSERT INTO cabins (cabin_type, description, price_per_night, price_per_week) VALUES (?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek]);
 
-    // After inserting, you might want to redirect or display a success message
-    // For now, let's just display the submitted data
+    // To insert inclusions, you may have a junction table and need to insert multiple rows
+    // Example:
+    // foreach ($inclusions as $inclusion) {
+    //     $sql_inclusions = "INSERT INTO cabin_inclusions (cabin_id, inclusion_id) VALUES (?, ?)";
+    //     $stmt_inclusions = $pdo->prepare($sql_inclusions);
+    //     // Assuming you retrieve or have the cabin ID and inclusion ID
+    //     $stmt_inclusions->execute([$cabin_id, $inclusion_id]);
+    // }
+
+    // Redirect to a new page or display a success message
     echo "<h2>Cabin Information Submitted:</h2>";
-    echo "<p>Cabin Type: $cabinType</p>";
-    echo "<p>Description: $description</p>";
-    echo "<p>Price Per Night: $pricePerNight</p>";
-    echo "<p>Price Per Week: $pricePerWeek</p>";
+    // Display the submitted data
+    // ... 
 }
-
-// ... rest of your script
-
 ?>
