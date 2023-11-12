@@ -35,15 +35,14 @@ body, html {
 
 .imagebutton {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically (if needed) */
-    width: 100%; /* Full width of the container */
-    margin-bottom: 20px; /* Consistent margin */
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Consistent bottom margin */
 }
 
 .image {
     display: block;
-    margin: 0 auto; /* Auto margins for horizontal centering */
+    margin: 0 auto; /* Centering within the wrapper */
 }
 
 .cabin, .description, .night, .week, .inclusions, .image {
