@@ -31,13 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // document.querySelector('.custom-file-label').textContent = fileName;
 
     // Change button color to green if a file is selected
-    if (fileInput.files[0]) {
-      uploadButton.style.backgroundColor = 'green';
-      uploadButton.style.color = 'white';
-    } else {
-      // Reset to original color if no file is selected
-      uploadButton.style.backgroundColor = '';
-      uploadButton.style.color = '';
+    fileInput.addEventListener('change', () => {
+        // Change the button text to "Uploaded" if a file is selected
+        if (fileInput.files[0]) {
+            uploadButton.textContent = 'Uploaded';
+            uploadButton.style.backgroundColor = 'green';
+            uploadButton.style.color = 'white';
+        } else {
+            // Reset to original text and color if no file is selected
+            uploadButton.textContent = 'Choose File';
+            uploadButton.style.backgroundColor = '';
+            uploadButton.style.color = '';
+        }
     }
   });
 });
