@@ -10,3 +10,11 @@ body {
 #image {
     text-align: center;
 }
+
+label, select {
+    line-height: 3;
+}
+
+textarea {
+    padding: 20px;
+}
