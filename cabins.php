@@ -1,7 +1,34 @@
 <?php
 
-// Database connection setup should be here
-// ...
+<?php
+// Get the database connection details from environment variables
+$dbUrl = getenv('postgres://wxefzfbb:d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7@pom.db.elephantsql.com/wxefzfbb');
+
+// Parse the URL to get the connection details
+$dbParams = parse_url($dbUrl);
+
+$host = $dbParams['host'];
+$dbname = ltrim($dbParams['path'], '/');
+$user = $dbParams['user'];
+$password = $dbParams['pass'];
+$port = $dbParams['port'];
+
+// Set up the DSN (Data Source Name)
+$dsn = "pgsql:host={$host};port={$port};dbname={$dbname};user={$user};password={$password}";
+
+// Create a new PDO instance
+try {
+    $pdo = new PDO($dsn);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Your database interaction goes here
+    // ...
+
+} catch (PDOException $e) {
+    // Handle any database connection errors
+    error_log("Connection failed: " . $e->getMessage());
+    die("Connection failed: " . $e->getMessage());
+}
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
