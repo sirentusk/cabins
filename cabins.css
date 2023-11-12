@@ -34,14 +34,12 @@ body, html {
 }
 
 .imagebutton {
-    display: inline-block;
+    box-sizing: content-box;
     background: white;
     border-radius: 50px;
-    padding: 5px;
     cursor: pointer;
     margin: 0 auto;
     border: 2px solid #d3d3d3;
-    box-sizing: content-box;
 }
 
 .image {
@@ -49,7 +47,7 @@ body, html {
     margin: 0 auto;
 }
 
-.cabin, .description, .night, .week, .inclusions, .image {
+.cabin, .imagebutton, .submit, .description, .night, .week, .inclusions, .image {
     margin-bottom: 20px !important;
     padding: 10px;
 }
@@ -57,7 +55,6 @@ body, html {
 .submit {
     width: 200px;
     height: 50px;
-    padding: 10px;
     font-size: 1em;
     border-radius: 50px;
     border: 2px solid #d3d3d3;
