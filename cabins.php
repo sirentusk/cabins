@@ -1,6 +1,9 @@
 <?php
 
-<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Get the database connection details from environment variables
 $dbUrl = getenv('postgres://wxefzfbb:d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7@pom.db.elephantsql.com/wxefzfbb');
 
