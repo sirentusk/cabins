@@ -13,9 +13,14 @@ body {
 
 label, select, .submit {
     line-height: 3;
-}
-
-textarea {
     padding: 20px;
 }
 
+textarea, .week, .night {
+    padding: 20px;
+}
+
+.description {
+    width: 250px;
+    height: 150px
+}
