@@ -82,4 +82,8 @@ header img {
         width: 150px;
         height: 40px;
     }
+
+    header img {
+        display: none;
+    }
 }
