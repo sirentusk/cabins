@@ -33,12 +33,19 @@ body, html {
     resize: vertical;
 }
 
+.imagebutton {
+    text-align: center; /* Center content */
+    width: 100%; /* Full width of the container */
+    margin-bottom: 20px; /* Consistent margin */
+}
+
 .image {
-    width: 50%; /* Adjust based on layout */
+    display: inline-block; /* Align to center */
+    width: auto; /* Let the browser determine the width */
 }
 
 .cabin, .description, .night, .week, .inclusions, .image {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 /* Responsive submit button */
