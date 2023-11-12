@@ -18,10 +18,11 @@ body, html {
 }
 
 header img {
-    width: 800px;
+    width: auto;
     height: auto;
     float: left;
-    padding-left: 150px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .content {
