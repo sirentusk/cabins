@@ -18,12 +18,12 @@ body, html {
 }
 
 header img {
-    width: 80% !important;
+    width: 80%;
     height: auto;
-    float: left;
     padding-left: 15%;
     padding-right: 15%;
     overflow-x: hidden;
+    box-sizing: none;
 }
 
 .content {
