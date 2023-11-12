@@ -42,7 +42,6 @@ body, html {
     margin: 0 auto;
     border: 2px solid #d3d3d3;
     padding: 5px;
-    padding-bottom: 10px !important;
 }
 
 .image {
@@ -63,7 +62,6 @@ body, html {
     border: 2px solid #d3d3d3;
     cursor: pointer;
     background: white;
-    padding-top: 10px !important;
 }
 
 .submit:hover, .imagebutton:hover {
