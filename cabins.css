@@ -37,10 +37,8 @@ body, html {
     display: inline-block;
     padding: 10px;
     margin: 0 auto;
-    background-color: #ddd;
     border-radius: 5px;
-    cursor: pointer;
-    /* Additional styling as needed */
+    text-align: center;
 }
 
 .image {
