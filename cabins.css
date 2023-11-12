@@ -41,8 +41,6 @@ body, html {
     cursor: pointer;
     margin: 0 auto;
     border: 2px solid #d3d3d3;
-    width: auto;
-    height: auto;
 }
 
 .image {
