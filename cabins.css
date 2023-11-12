@@ -14,21 +14,22 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 16px; /* Fixed font size for desktop */
 }
 
 .content {
-    width: 90vw; /* Adjusted to viewport width */
-    max-width: 1200px; /* Maximum width */
-    max-height: 90vh; /* Adjusted to viewport height */
-    overflow: auto; /* Allows scrolling within the .content if necessary */
-    padding: 5vw; /* Responsive padding */
+    width: 80vw; /* Adjust based on desktop screen size */
+    max-width: 1200px;
+    max-height: 80vh; /* Adjust for desktop */
+    overflow: auto;
+    padding: 20px; /* Fixed padding for desktop */
     box-sizing: border-box;
 }
 
 .description {
     width: 250px; /* Fixed width */
-    min-height: 150px; /* Fixed minimum height */
-    padding: 1vw; /* Responsive padding */
+    height: 150px; /* Fixed height */
+    padding: 10px;
     resize: vertical;
     margin-bottom: 1vw; /* Space below the textarea */
 }
@@ -36,11 +37,14 @@ body, html {
 /* Adjustments for form elements */
 label, select, input, textarea {
     margin-bottom: 1vw; /* Space between form elements */
+    margin-bottom: 10px; /* Fixed margin for desktop */
+    width: 60%; /* Adjust width as needed */
 }
 
 /* Styles for the file input */
 .image {
-    margin-bottom: 1vw; /* Space below the file input */
+    width: 50%; /* Adjust based on layout */
+    margin-bottom: 10px;
 }
 
 /* Responsive submit button */
@@ -49,9 +53,10 @@ label, select, input, textarea {
     font-size: 1.2vw;
 }
 
-/* Additional responsive adjustments as needed */
-@media (max-width: 600px) {
+@media (min-width: 1024px) {
     .description, .image, .submit {
-        width: 80vw; /* Make input elements take more width on smaller screens */
+        width: 50%; /* Adjust for larger screens */
     }
+
+    /* Any other desktop-specific adjustments */
 }
