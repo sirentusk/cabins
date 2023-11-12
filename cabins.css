@@ -28,7 +28,7 @@ body, html {
 
 .description {
     width: 350px !important;
-    height: 100px !important;
+    height: 80px !important;
     resize: vertical;
 }
 
@@ -37,6 +37,8 @@ body, html {
     border-radius: 50px;
     margin-bottom: 20px !important;
     cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .image {
