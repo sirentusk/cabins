@@ -1,68 +1,57 @@
 * {
-    background: rgb(192, 192, 192);
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-size: calc(12px + 0.390625vw);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.inclusions {
-    overflow-y: hidden; /* This attempts to hide the vertical scrollbar */
-}
-
-body {
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(192, 192, 192);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: auto;
-    object-fit: contain;
 }
 
-label, select, .submit {
-    line-height: 3;
-    padding: 20px;
-}
-
-textarea, .week, .night {
-    padding: 20px;
+.content {
+    width: 90vw; /* Adjusted to viewport width */
+    max-width: 1200px; /* Maximum width */
+    max-height: 90vh; /* Adjusted to viewport height */
+    overflow: auto; /* Allows scrolling within the .content if necessary */
+    padding: 5vw; /* Responsive padding */
+    box-sizing: border-box;
 }
 
 .description {
-    width: 250px;
-    min-height: 150px;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    display: block;
+    width: 250px; /* Fixed width */
+    min-height: 150px; /* Fixed minimum height */
+    padding: 1vw; /* Responsive padding */
     resize: vertical;
+    margin-bottom: 1vw; /* Space below the textarea */
 }
 
-img {
-    max-width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Do not crop the image */
+/* Adjustments for form elements */
+label, select, input, textarea {
+    margin-bottom: 1vw; /* Space between form elements */
 }
 
-h1 {
-    font-size: 4vw; /* Scale font size based on the viewport width */
-}
-
-/* Use media queries for finer control */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 5.5vw;
-    }
-}
-
-
-.content {
-    width: 90%; /* Use a percentage of the viewport width */
-    max-width: 1200px; /* Maximum width */
-}
-
+/* Styles for the file input */
 .image {
-    text-align: center;
+    margin-bottom: 1vw; /* Space below the file input */
+}
+
+/* Responsive submit button */
+.submit {
+    padding: 1vw;
+    font-size: 1.2vw;
+}
+
+/* Additional responsive adjustments as needed */
+@media (max-width: 600px) {
+    .description, .image, .submit {
+        width: 80vw; /* Make input elements take more width on smaller screens */
+    }
 }
