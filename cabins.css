@@ -21,6 +21,7 @@ header img {
     width: 600px;
     height: auto;
     float: left;
+    text-align: center;
 }
 
 .content {
@@ -29,14 +30,14 @@ header img {
     max-height: 95vh;
     overflow: hidden;
     padding: 10px;
-    box-sizing: border-box;       
+    box-sizing: border-box;
 }
 
 .description {
     width: 350px;
     height: 80px !important;
-    resize: horizontal; /* allows resizing only horizontally */
-    overflow-y: auto; /* adds a scrollbar if text overflows vertically */
+    resize: horizontal;
+    overflow-y: auto;
 }
 
 .imagebutton {
