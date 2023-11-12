@@ -17,6 +17,11 @@ body, html {
     font-size: 16px;
 }
 
+header {
+    width: 200px;
+    height: auto;
+}
+
 .content {
     width: 80vw;
     max-width: 1200px;
