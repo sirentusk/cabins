@@ -14,14 +14,14 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 16px; /* Fixed font size for desktop */
+    font-size: 16px;
 }
 
 .content {
-    width: 80vw; /* Adjust based on desktop screen size */
+    width: 80vw;
     max-width: 1200px;
-    max-height: 95vh; /* Adjust to slightly less than full viewport height */
-    overflow: hidden; /* Hide overflow to prevent internal scroll */
+    max-height: 95vh;
+    overflow: hidden;
     padding: 10px;
     box-sizing: border-box;       
 }
@@ -48,33 +48,34 @@ body, html {
 }
 
 .submit {
-    width: 200px; /* Fixed width */
-    height: 50px; /* Fixed height */
-    padding: 10px; /* Comfortable padding */
-    font-size: 1em; /* Readable font size */
-    cursor: pointer; /* Cursor indication for clickability */
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 .submit:hover {
-    background-color: #ddd; /* Lighter background on hover */
+    background-color: #ddd;
 }
 
 .submit:active {
-    background-color: #ccc; /* Slightly darker background on click */
+    background-color: #ccc;
 }
 
 @media (min-width: 1024px) {
-    /* Adjust styles for larger screens */
+    
     body, html {
-        font-size: 14px; /* Smaller font size */
+        font-size: 14px;
     }
 
     .content {
-        padding: 15px; /* Adjust padding */
+        padding: 15px;
     }
     
     .submit {
-        width: 150px; /* Smaller width for mobile */
-        height: 40px; /* Smaller height for mobile */
+        width: 150px;
+        height: 40px;
     }
 }
