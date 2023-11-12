@@ -18,12 +18,7 @@ body, html {
 
 header img {
     width: 80%;
-    height: auto;
-    margin-left: 0;
-    padding-left: 15%;
-    padding-right: 15%;
     overflow-x: hidden;
-    display: block;
 }
 
 .content {
