@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "There was an error uploading the image.";
             }
         } else {
-            echo "Invalid file type. Only specific image files are allowed.";
+            echo "Invalid file type, please upload a jpg, jpeg, png, tiff, webp, svg, heif or heic file type.";
         }
     }
 
