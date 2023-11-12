@@ -20,10 +20,10 @@ body, html {
 .content {
     width: 80vw; /* Adjust based on desktop screen size */
     max-width: 1200px;
-    max-height: 80vh; /* Adjust for desktop */
-    overflow: auto;
-    padding: 20px; /* Fixed padding for desktop */
-    box-sizing: border-box;
+    max-height: 95vh; /* Adjust to slightly less than full viewport height */
+    overflow: hidden; /* Hide overflow to prevent internal scroll */
+    padding: 10px;
+    box-sizing: border-box;       
 }
 
 .description {
@@ -35,10 +35,10 @@ body, html {
 }
 
 /* Adjustments for form elements */
-label, select, input, textarea {
-    margin-bottom: 1vw; /* Space between form elements */
-    margin-bottom: 10px; /* Fixed margin for desktop */
-    width: 60%; /* Adjust width as needed */
+label, select, input[type='text'], textarea {
+    margin-bottom: 10px;
+    width: 100%; /* Full width within container */
+    max-height: 100px; /* Limit height to prevent overflow */
 }
 
 /* Styles for the file input */
@@ -54,9 +54,12 @@ label, select, input, textarea {
 }
 
 @media (min-width: 1024px) {
-    .description, .image, .submit {
-        width: 50%; /* Adjust for larger screens */
+    /* Adjust styles for larger screens */
+    body, html {
+        font-size: 14px; /* Smaller font size */
     }
 
-    /* Any other desktop-specific adjustments */
+    .content {
+        padding: 15px; /* Adjust padding */
+    }
 }
