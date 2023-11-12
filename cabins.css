@@ -19,7 +19,7 @@ body, html {
 
 header img {
     width: 600px;
-    height: 450px;
+    height: auto;
     float: left;
 }
 
