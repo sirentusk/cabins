@@ -27,4 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
     document.querySelector('.custom-file-label').textContent = fileName;
   });
+
+    // Update custom file label with the selected file name
+    const fileInput = document.querySelector('.imagebutton .image');
+    const uploadButton = document.getElementById('uploadButton'); // Get the upload button
+    fileInput.addEventListener('change', () => {
+        const fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
+        document.querySelector('.custom-file-label').textContent = fileName;
+
+        // Change button color to green if a file is selected
+        if (fileInput.files[0]) {
+            uploadButton.style.backgroundColor = 'green';
+            uploadButton.style.color = 'white';
+        } else {
+            // Reset to original color if no file is selected
+            uploadButton.style.backgroundColor = '';
+            uploadButton.style.color = '';
+        }
+    });
 });
