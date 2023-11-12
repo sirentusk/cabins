@@ -12,7 +12,7 @@
 <form method="post" action="cabins.php" enctype="multipart/form-data">
 
     <label for="cabinType">Cabin Type:</label><br>
-    <select id="cabinType" name="cabinType" required>
+    <select class="cabinType" name="cabinType" required>
         <option value="Standard cabin">Standard cabin – sleeps 4</option>
         <option value="Standard open plan cabin">Standard open plan cabin – sleeps 4</option>
         <option value="Deluxe cabin">Deluxe cabin – sleeps 4</option>
@@ -22,13 +22,13 @@
     </select><br>
 
     <label for="description">Description:</label><br>
-    <textarea id="description" name="description" required></textarea><br>
+    <textarea class="description" name="description" required></textarea><br>
 
     <label for="pricePerNight">Price Per Night:</label><br>
-    <input type="number" id="night" name="pricePerNight" required><br>
+    <input type="number" class="night" name="pricePerNight" required><br>
 
     <label for="pricePerWeek">Price Per Week:</label><br>
-    <input type="number" id="week" name="pricePerWeek" required><br>
+    <input type="number" class="week" name="pricePerWeek" required><br>
 
     <label for="inclusions">Cabin Inclusions:</label><br>
     <select id="inclusions" id="description" name="inclusions[]" multiple required size="14">
@@ -49,10 +49,10 @@
     </select><br>
 
     <label for="cabinImage">Cabin Image:</label><br>
-    <input type="file" id="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
+    <input type="file" class="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
 
     <br>
-    <input type="submit" id="submit" value="Submit">
+    <input type="submit" class="submit" value="Submit">
 </form>
 
 </body>
