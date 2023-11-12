@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Update Cabin Information</title>
     <script src="cabins.js"></script>
-    <script src="cabins.css"></script>
+    <link rel="stylesheet" type="text/css" href="cabins.css"> 
 </head>
     
 <body>
@@ -49,7 +49,7 @@
     </select><br>
 
     <label for="cabinImage">Cabin Image:</label><br>
-    <input type="file" id="cabinImage" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
+    <input type="file" id="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
 
     <input type="submit" value="Submit">
 </form>
