@@ -35,6 +35,7 @@ body, html {
 .imagebutton {
     border: 1px solid #dcdcdc;
     border-radius: 50px;
+    margin-bottom: 20px !important;
     cursor: pointer;
 }
 
@@ -43,7 +44,7 @@ body, html {
     margin: 0 auto;
 }
 
-.cabin, .imagebutton, .description, .night, .week, .inclusions, .image {
+.cabin, .description, .night, .week, .inclusions, .image {
     margin-bottom: 20px !important;
     padding: 10px;
 }
