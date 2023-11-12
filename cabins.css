@@ -17,8 +17,7 @@ body, html {
 }
 
 header img {
-    width: 80%;
-    overflow-x: hidden;
+    width: 100%;
 }
 
 .content {
