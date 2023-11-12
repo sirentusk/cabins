@@ -8,7 +8,7 @@
     
 <body>
 
-<form method="post" action="cabins.php">
+<form method="post" action="cabins.php" enctype="multipart/form-data">
 
     <label for="cabinType">Cabin Type:</label><br>
     <select id="cabinType" name="cabinType" required>
@@ -46,6 +46,9 @@
         <option value="Ironing Facilities">Ironing Facilities</option>
         <option value="Microwave">Microwave</option>
     </select><br>
+
+    <label for="cabinImage">Cabin Image:</label><br>
+    <input type="file" id="cabinImage" name="cabinImage" accept="image/*"><br>
 
     <input type="submit" value="Submit">
 </form>
