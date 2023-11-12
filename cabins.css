@@ -18,9 +18,8 @@ body, html {
 }
 
 header img {
-    width: 80vw !important;
+    width: 70vw !important;
     height: auto;
-    float: left;
     padding-left: 25%;
     padding-right: 25%;
     overflow-x: hidden;
