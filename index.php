@@ -50,5 +50,12 @@
     <input type="submit" value="Submit">
 </form>
 
+<style>
+#inclusions {
+    overflow-y: hidden; /* This attempts to hide the vertical scrollbar */
+}
+</style>
+
+
 </body>
 </html>
