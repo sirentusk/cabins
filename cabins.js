@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const inclusionsSelect = document.getElementById('inclusions');
+  // Handling multi-selection for inclusions
+  const inclusionsSelect = document.querySelector('.inclusions');
 
-  // Allow multi-selection in Inclusions without CTRL key
   inclusionsSelect.addEventListener('mousedown', (event) => {
     event.preventDefault(); // Prevent default to enable custom behavior
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Update custom file label with the selected file name
-  const fileInput = document.getElementById('fileInput');
+  const fileInput = document.querySelector('.file-input-wrapper .image');
   fileInput.addEventListener('change', () => {
     const fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
     document.querySelector('.custom-file-label').textContent = fileName;
