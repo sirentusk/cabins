@@ -12,16 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pricePerWeek = $_POST['pricePerWeek'];
     $inclusions = $_POST['inclusions']; // This will be an array of selected inclusions
 
-    // Process the form data and interact with the database
-    // ...
-
-    // Display the submitted data (or redirect to a success page)
-    echo "<h2>Cabin Information Submitted:</h2>";
-    echo "<p>Cabin Type: $cabinType</p>";
-    echo "<p>Description: $description</p>";
-    echo "<p>Price Per Night: $pricePerNight</p>";
-    echo "<p>Price Per Week: $pricePerWeek</p>";
-
     // Handle the inclusions
     if (!empty($inclusions)) {
         echo "<h3>Selected Inclusions:</h3>";
@@ -31,6 +21,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         echo "</ul>";
     }
+
+    // Check if a file has been uploaded
+    if (isset($_FILES['cabinImage']) && $_FILES['cabinImage']['error'] == UPLOAD_ERR_OK) {
+        $image = $_FILES['cabinImage'];
+        $imageType = strtolower(pathinfo($image['name'], PATHINFO_EXTENSION));
+
+        // Check if the file is one of the allowed types
+        $allowedTypes = ['jpg', 'jpeg', 'png', 'tiff', 'webp', 'svg', 'heif', 'heic'];
+        if (in_array($imageType, $allowedTypes)) {
+            $targetDirectory = "uploads/";
+            $newFileName = uniqid('cabin_', true) . '.' . $imageType;
+            $targetFile = $targetDirectory . $newFileName;
+
+            // Move the uploaded file to the target directory
+            if (move_uploaded_file($image['tmp_name'], $targetFile)) {
+                echo "Image uploaded successfully.";
+                // Store the new file name in the database, not the original name from the user
+                // $sql = "INSERT INTO cabins (image_path) VALUES (?)";
+                // ... Execute database query to store image path ...
+            } else {
+                echo "There was an error uploading the image.";
+            }
+        } else {
+            echo "Invalid file type. Only specific image files are allowed.";
+        }
+    }
+
+    // Process the rest of the form data and interact with the database
+    // ...
 }
 
 // Close the database connection if it's open
