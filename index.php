@@ -51,11 +51,11 @@
             <option value="Ironing Facilities">Ironing Facilities</option>
             <option value="Microwave">Microwave</option>
         </select><br>
-    
+
         <label for="cabinImage">Cabin Image:</label><br>
         <div class="imagebutton">
             <input type="file" class="image" id="fileInput" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic" style="display: none;">
-            <label for="fileInput" class="imagebutton">Choose File</label>
+            <label for="fileInput" id="uploadButton" class="imagebutton">Choose File</label>
         </div>
     
         <br><br>
