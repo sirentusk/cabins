@@ -26,16 +26,16 @@
         </select><br>
     
         <label for="description">Description:</label><br>
-        <textarea class="description" name="description" required></textarea><br>
+        <textarea class="description" name="description"></textarea><br>
     
         <label for="pricePerNight">Price Per Night:</label><br>
-        <input type="number" class="night" name="pricePerNight" required><br>
+        <input type="number" class="night" name="pricePerNight"><br>
     
         <label for="pricePerWeek">Price Per Week:</label><br>
-        <input type="number" class="week" name="pricePerWeek" required><br>
+        <input type="number" class="week" name="pricePerWeek"><br>
     
         <label for="inclusions">Cabin Inclusions:</label><br>
-        <select class="inclusions" name="inclusions[]" multiple required size="14">
+        <select class="inclusions" name="inclusions[]" multiple size="14">
             <option value="Air conditioner">Air conditioner</option>
             <option value="Linen">Linen</option>
             <option value="Veranda">Veranda</option>
