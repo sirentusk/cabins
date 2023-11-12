@@ -35,11 +35,10 @@ body, html {
 
 .imagebutton {
     display: inline-block;
-    padding: 10px;
-    margin: 0 auto;
-    padding-left: 50px;
-    border-radius: 5px;
-    text-align: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
 }
 
 .image {
