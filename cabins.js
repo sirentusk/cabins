@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Update custom file label with the selected file name
-  const fileInput = document.querySelector('.file-input-wrapper .image');
+  const fileInput = document.querySelector('.imagebutton .image');
   fileInput.addEventListener('change', () => {
     const fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
     document.querySelector('.custom-file-label').textContent = fileName;
