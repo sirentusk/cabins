@@ -22,5 +22,10 @@ textarea, .week, .night {
 
 .description {
     width: 250px;
-    height: 150px
+    min-height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+    resize: vertical;
 }
