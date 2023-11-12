@@ -8,6 +8,9 @@
 </head>
     
 <body>
+    <header>
+        <img src="sunny_spot_holidays_banner.webp">
+    </header>
 
 <div class="content">
     <form method="post" action="cabins.php" enctype="multipart/form-data">
