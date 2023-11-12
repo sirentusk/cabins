@@ -49,5 +49,16 @@
     <input type="submit" value="Submit">
 </form>
 
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  const inclusionsSelect = document.getElementById('inclusions');
+  inclusionsSelect.addEventListener('change', (event) => {
+    const selectedOptions = Array.from(event.target.selectedOptions).map(option => option.value);
+    console.log(selectedOptions);
+  });
+});
+    
+</script>
+
 </body>
 </html>
