@@ -26,23 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const uploadButton = document.getElementById('uploadButton'); // Get the upload button
 
   fileInput.addEventListener('change', () => {
-    const fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
-    // Assuming you have a label for displaying the file name
-    // document.querySelector('.custom-file-label').textContent = fileName;
-
-    // Change button color to green if a file is selected
-    fileInput.addEventListener('change', () => {
-        // Change the button text to "Uploaded" if a file is selected
-        if (fileInput.files[0]) {
-            uploadButton.textContent = 'Uploaded';
-            uploadButton.style.backgroundColor = 'green';
-            uploadButton.style.color = 'white';
-        } else {
-            // Reset to original text and color if no file is selected
-            uploadButton.textContent = 'Choose File';
-            uploadButton.style.backgroundColor = '';
-            uploadButton.style.color = '';
-        }
+    // Change the button text to "Uploaded" and color to green if a file is selected
+    if (fileInput.files[0]) {
+      uploadButton.textContent = 'Uploaded';
+      uploadButton.style.backgroundColor = 'green';
+      uploadButton.style.color = 'white';
+    } else {
+      // Reset to original text and color if no file is selected
+      uploadButton.textContent = 'Choose File';
+      uploadButton.style.backgroundColor = '';
+      uploadButton.style.color = '';
     }
   });
 });
