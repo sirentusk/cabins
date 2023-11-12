@@ -33,7 +33,6 @@ body, html {
 }
 
 .imagebutton {
-    display: inline-block;
     border: 1px solid #dcdcdc;
     border-radius: 50px;
     cursor: pointer;
