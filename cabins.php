@@ -17,7 +17,7 @@ $password = $dbParams['pass'];
 $port = $dbParams['port'];
 
 // Set up the DSN (Data Source Name)
-$dsn = "pgsql:host={pom.db.elephantsql.com};port={5432};dbname={wxefzfbb};user={wxefzfbb};password={d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7}";
+$dsn = "pgsql:host=pom.db.elephantsql.com;port=5432};dbname=wxefzfbb;user=wxefzfbbr;password=d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7";
 
 // Create a new PDO instance
 try {
