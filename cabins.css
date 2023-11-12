@@ -34,14 +34,14 @@ body, html {
 }
 
 .imagebutton {
+    display: inline-block;
     background: white;
     border-radius: 50px;
-    margin-bottom: 20px !important;
     padding: 5px;
     cursor: pointer;
-    width: fit-content;
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin: 0 auto 20px;
+    border: 2px solid #d3d3d3;
+    box-sizing: content-box;
 }
 
 .image {
@@ -67,10 +67,6 @@ body, html {
 
 .submit:hover, .imagebutton:hover {
     background-color: #ddd;
-}
-
-.submit:active, .imagebutton:hover {
-    background-color: #ccc;
 }
 
 @media (min-width: 1024px) {
