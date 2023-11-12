@@ -62,7 +62,7 @@ body, html {
     border: 2px solid #d3d3d3;
     cursor: pointer;
     background: white;
-    padding-top: 10px;
+    padding-top: 10px !important;
 }
 
 .submit:hover, .imagebutton:hover {
