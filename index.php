@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Update Cabin Information</title>
 </head>
+    
 <body>
 
 <form method="post" action="cabins.php">
