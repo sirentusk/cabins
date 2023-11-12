@@ -31,17 +31,14 @@ body, html {
     height: 150px; /* Fixed height */
     padding: 10px;
     resize: vertical;
-    margin-bottom: 20px;
 }
 
-.week, .number, .inclusions {
-    margin-bottom: 20px;
-}
-
-/* Styles for the file input */
 .image {
     width: 50%; /* Adjust based on layout */
-    margin-bottom: 10px;
+}
+
+.cabin, .description, .night, .week, .inclusions, .image {
+    margin-bottom: 20px;
 }
 
 /* Responsive submit button */
