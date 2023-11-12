@@ -51,7 +51,7 @@
     <label for="cabinImage">Cabin Image:</label><br>
     <input type="file" id="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
 
-    <input type="submit" value="Submit">
+    <input type="submit" id="submit" value="Submit">
 </form>
 
 </body>
