@@ -25,10 +25,10 @@
     <textarea id="description" name="description" required></textarea><br>
 
     <label for="pricePerNight">Price Per Night:</label><br>
-    <input type="number" id="pricePerNight" name="pricePerNight" required><br>
+    <input type="number" id="night" name="pricePerNight" required><br>
 
     <label for="pricePerWeek">Price Per Week:</label><br>
-    <input type="number" id="pricePerWeek" name="pricePerWeek" required><br>
+    <input type="number" id="week" name="pricePerWeek" required><br>
 
     <label for="inclusions">Cabin Inclusions:</label><br>
     <select id="inclusions" name="inclusions[]" multiple required size="14">
@@ -51,6 +51,7 @@
     <label for="cabinImage">Cabin Image:</label><br>
     <input type="file" id="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
 
+    <br>
     <input type="submit" id="submit" value="Submit">
 </form>
 
