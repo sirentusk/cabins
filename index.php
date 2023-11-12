@@ -50,9 +50,6 @@
         </select><br>
     
         <label for="cabinImage">Cabin Image:</label><br>
-        <div class="imagebutton">
-            <input type="file" class="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic">
-        </div>
         <div class="file-input-wrapper">
             <input type="file" class="image" id="fileInput" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic" style="display: none;">
             <label for="fileInput" class="custom-file-label">Choose File</label>
