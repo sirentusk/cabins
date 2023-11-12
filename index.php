@@ -55,7 +55,7 @@
             <label for="fileInput" class="imagebutton">Choose File</label>
         </div>
     
-        <br>
+        <br><br>
         <input type="submit" class="submit" value="Submit">
     </form>
 </div>
