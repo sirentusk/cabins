@@ -34,10 +34,13 @@ body, html {
 }
 
 .imagebutton {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    width: 100%; /* Full width */
-    margin-bottom: 20px; /* Consistent bottom margin */
+    display: inline-block;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Additional styling as needed */
 }
 
 .image {
