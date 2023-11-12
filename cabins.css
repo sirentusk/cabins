@@ -18,10 +18,11 @@ body, html {
 }
 
 header img {
-    width: 70vw !important;
+    width: 80% !important;
     height: auto;
-    padding-left: 25%;
-    padding-right: 25%;
+    float: left;
+    padding-left: 15%;
+    padding-right: 15%;
     overflow-x: hidden;
 }
 
