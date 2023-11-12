@@ -34,13 +34,6 @@ body, html {
     margin-bottom: 20px;
 }
 
-/* Adjustments for form elements */
-label, select, input[type='text'], textarea {
-    margin-bottom: 20px;
-    width: 100%; /* Full width within container */
-    max-height: 100px; /* Limit height to prevent overflow */
-}
-
 .week, .number, .inclusions {
     margin-bottom: 20px;
 }
