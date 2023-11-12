@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: calc(12px + 0.390625vw);
+    font-size: calc(10px + 0.390625vw);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -20,6 +20,7 @@ body, html {
 header {
     width: 200px;
     height: auto;
+    float: left;
 }
 
 .content {
@@ -75,10 +76,6 @@ header {
 
 @media (min-width: 1024px) {
     
-    body, html {
-        font-size: 14px;
-    }
-
     .content {
         padding: 15px;
     }
