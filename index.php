@@ -31,7 +31,7 @@
     <input type="number" class="week" name="pricePerWeek" required><br>
 
     <label for="inclusions">Cabin Inclusions:</label><br>
-    <select id="inclusions" id="description" name="inclusions[]" multiple required size="14">
+    <select class="inclusions" id="description" name="inclusions[]" multiple required size="14">
         <option value="Air conditioner">Air conditioner</option>
         <option value="Linen">Linen</option>
         <option value="Veranda">Veranda</option>
