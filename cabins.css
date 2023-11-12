@@ -27,14 +27,14 @@ body, html {
 }
 
 .description {
-    width: 350px !important;
+    width: 350px;
     height: 80px !important;
     resize: horizontal; /* allows resizing only horizontally */
     overflow-y: auto; /* adds a scrollbar if text overflows vertically */
 }
 
 .imagebutton {
-    border: 1px solid #dcdcdc;
+    background: white;
     border-radius: 50px;
     margin-bottom: 20px !important;
     padding: 5px;
@@ -60,6 +60,7 @@ body, html {
     font-size: 1em;
     border-radius: 50px;
     cursor: pointer;
+    background: white;
 }
 
 .submit:hover {
