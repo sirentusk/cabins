@@ -31,7 +31,7 @@ body, html {
     height: 150px; /* Fixed height */
     padding: 10px;
     resize: vertical;
-    margin-bottom: 1vw; /* Space below the textarea */
+    margin-bottom: 20px;
 }
 
 /* Adjustments for form elements */
@@ -39,6 +39,10 @@ label, select, input[type='text'], textarea {
     margin-bottom: 20px;
     width: 100%; /* Full width within container */
     max-height: 100px; /* Limit height to prevent overflow */
+}
+
+.week, .number, .inclusions {
+    margin-bottom: 20px;
 }
 
 /* Styles for the file input */
