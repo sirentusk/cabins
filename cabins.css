@@ -22,7 +22,7 @@ header img {
     padding-left: 15%;
     padding-right: 15%;
     overflow-x: hidden;
-    box-sizing: none;
+    box-sizing: content-box
 }
 
 .content {
