@@ -34,14 +34,16 @@ body, html {
 }
 
 .imagebutton {
-    text-align: center; /* Center content */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically (if needed) */
     width: 100%; /* Full width of the container */
     margin-bottom: 20px; /* Consistent margin */
 }
 
 .image {
-    display: inline-block; /* Align to center */
-    width: auto; /* Let the browser determine the width */
+    display: block;
+    margin: 0 auto; /* Auto margins for horizontal centering */
 }
 
 .cabin, .description, .night, .week, .inclusions, .image {
