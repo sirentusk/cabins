@@ -1,13 +1,19 @@
-#inclusions {
+
+* {
+    background: rgb(192, 192, 192);
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: calc(15px + 0.390625vw);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inclusions {
     overflow-y: hidden; /* This attempts to hide the vertical scrollbar */
 }
 
-body {
-    background: rgb(192, 192, 192);
-    text-align: center;
-}
-
-#image {
+.image {
     text-align: center;
 }
 
