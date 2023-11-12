@@ -1,10 +1,8 @@
 
 * {
     background: rgb(192, 192, 192);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: calc(15px + 0.390625vw);
+	box-sizing: border-box;
+    font-size: calc(12px + 0.390625vw);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -14,18 +12,14 @@
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
     margin: 0;
-    overflow: hidden;
-}
-
-.image {
-    text-align: center;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: contain;
 }
 
 label, select, .submit {
@@ -45,4 +39,26 @@ textarea, .week, .night {
     margin: 0 auto;
     display: block;
     resize: vertical;
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Do not crop the image */
+}
+
+h1 {
+    font-size: 4vw; /* Scale font size based on the viewport width */
+}
+
+/* Use media queries for finer control */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 5.5vw;
+    }
+}
+
+.content {
+    width: 90%; /* Use a percentage of the viewport width */
+    max-width: 1200px; /* Maximum width */
 }
