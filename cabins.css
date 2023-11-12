@@ -35,11 +35,13 @@ body, html {
 
 .imagebutton {
     box-sizing: content-box;
+    display: block;
     background: white;
     border-radius: 50px;
     cursor: pointer;
     margin: 0 auto;
     border: 2px solid #d3d3d3;
+
 }
 
 .image {
