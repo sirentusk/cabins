@@ -41,7 +41,7 @@ body, html {
     cursor: pointer;
     margin: 0 auto;
     border: 2px solid #d3d3d3;
-    margin-bottom: 20px !important;
+    padding: 5px;
 }
 
 .image {
