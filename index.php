@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Cabin Information</title>
+    <script src="cabins.js"></script>
 </head>
     
 <body>
@@ -48,31 +49,6 @@
 
     <input type="submit" value="Submit">
 </form>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const inclusionsSelect = document.getElementById('inclusions');
-  
-  inclusionsSelect.addEventListener('click', (event) => {
-    let value = event.target.value;
-    if (value) {
-      let selected = Array.from(inclusionsSelect.selectedOptions).map(opt => opt.value);
-      if (selected.includes(value)) {
-        inclusionsSelect.querySelectorAll('option').forEach(opt => {
-          if (opt.value === value) opt.selected = false;
-        });
-      } else {
-        inclusionsSelect.querySelectorAll('option').forEach(opt => {
-          if (opt.value === value) opt.selected = true;
-        });
-      }
-    }
-    // Prevent the default select behavior
-    event.preventDefault();
-  });
-});
-</script>
-
 
 </body>
 </html>
