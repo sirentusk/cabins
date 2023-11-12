@@ -36,7 +36,7 @@ body, html {
 
 /* Adjustments for form elements */
 label, select, input[type='text'], textarea {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%; /* Full width within container */
     max-height: 100px; /* Limit height to prevent overflow */
 }
@@ -49,8 +49,19 @@ label, select, input[type='text'], textarea {
 
 /* Responsive submit button */
 .submit {
-    padding: 1vw;
-    font-size: 1.2vw;
+    width: 200px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    padding: 10px; /* Comfortable padding */
+    font-size: 1em; /* Readable font size */
+    cursor: pointer; /* Cursor indication for clickability */
+}
+
+.submit:hover {
+    background-color: #ddd; /* Lighter background on hover */
+}
+
+.submit:active {
+    background-color: #ccc; /* Slightly darker background on click */
 }
 
 @media (min-width: 1024px) {
@@ -61,5 +72,10 @@ label, select, input[type='text'], textarea {
 
     .content {
         padding: 15px; /* Adjust padding */
+    }
+    
+    .submit {
+        width: 150px; /* Smaller width for mobile */
+        height: 40px; /* Smaller height for mobile */
     }
 }
