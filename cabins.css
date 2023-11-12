@@ -41,7 +41,6 @@ body, html {
     cursor: pointer;
     width: fit-content;
     margin: 0 auto;
-    border: 2px solid #d3d3d3;
     box-sizing: border-box;
 }
 
