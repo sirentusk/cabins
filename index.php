@@ -13,7 +13,7 @@
     <form method="post" action="cabins.php" enctype="multipart/form-data">
         
         <label for="cabinType">Cabin Type:</label><br>
-        <select class="cabinType" name="cabinType" required>
+        <select class="cabin" name="cabinType" required>
             <option value="Standard cabin">Standard cabin – sleeps 4</option>
             <option value="Standard open plan cabin">Standard open plan cabin – sleeps 4</option>
             <option value="Deluxe cabin">Deluxe cabin – sleeps 4</option>
@@ -50,7 +50,9 @@
         </select><br>
     
         <label for="cabinImage">Cabin Image:</label><br>
-        <input type="file" class="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic"><br>
+        <div class="imagebutton">
+            <input type="file" class="image" name="cabinImage" accept=".jpg, .jpeg, .png, .tiff, .webp, .svg, .heif, .heic">
+        </div>
     
         <br>
         <input type="submit" class="submit" value="Submit">
