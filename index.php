@@ -6,15 +6,10 @@
 </head>
 <body>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form method="post" action="cabins.php">
     <label for="cabinType">Cabin Type:</label><br>
     <select id="cabinType" name="cabinType" required>
-        <option value="Standard cabin">Standard cabin</option>
-        <option value="Standard open plan cabin">Standard open plan cabin</option>
-        <option value="Deluxe cabin">Deluxe cabin</option>
-        <option value="Villa">Villa</option>
-        <option value="Spa villa">Spa villa</option>
-        <option value="Slab powered site">Slab powered site</option>
+        <!-- ... other options ... -->
     </select><br>
 
     <label for="description">Description:</label><br>
@@ -25,6 +20,13 @@
 
     <label for="pricePerWeek">Price Per Week:</label><br>
     <input type="number" id="pricePerWeek" name="pricePerWeek" required><br>
+
+    <label for="inclusions">Cabin Inclusions:</label><br>
+    <select id="inclusions" name="inclusions[]" multiple required>
+        <option value="air_conditioner">Air conditioner</option>
+        <option value="linen">Linen</option>
+        <!-- ... more inclusions options ... -->
+    </select><br>
 
     <input type="submit" value="Submit">
 </form>
