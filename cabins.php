@@ -10,14 +10,14 @@ $dbUrl = getenv('postgres://wxefzfbb:d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7@pom.db.ele
 // Parse the URL to get the connection details
 $dbParams = parse_url($dbUrl);
 
-$host = $dbParams['host'];
+$host = $dbParams['host']?? null;
 $dbname = ltrim($dbParams['path'], '/');
-$user = $dbParams['user'];
-$password = $dbParams['pass'];
-$port = $dbParams['port'];
+$user = $dbParams['user'] ?? null;
+$password = $dbParams['pass'] ?? null;
+$port = $dbParams['port'] ?? null;
 
 // Set up the DSN (Data Source Name)
-$dsn = "pgsql:host=pom.db.elephantsql.com;port=5432};dbname=wxefzfbb;user=wxefzfbbr;password=d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7";
+$dsn = "pgsql:host=pom.db.elephantsql.com;port=5432;dbname=wxefzfbb;user=wxefzfbbr;password=d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7";
 
 // Create a new PDO instance
 try {
