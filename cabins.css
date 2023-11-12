@@ -3,7 +3,7 @@
 }
 
 body {
-    background: grey;
+    background: rgb(192, 192, 192);
     text-align: center;
 }
 
@@ -11,10 +11,11 @@ body {
     text-align: center;
 }
 
-label, select {
+label, select, .submit {
     line-height: 3;
 }
 
 textarea {
     padding: 20px;
 }
+
