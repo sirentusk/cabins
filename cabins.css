@@ -21,8 +21,9 @@ header img {
     width: auto;
     height: auto;
     float: left;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 25%;
+    padding-right: 25%;
+    overflow-x: hidden;
 }
 
 .content {
