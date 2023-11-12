@@ -29,13 +29,15 @@ body, html {
 .description {
     width: 350px !important;
     height: 80px !important;
-    resize: vertical;
+    resize: horizontal; /* allows resizing only horizontally */
+    overflow-y: auto; /* adds a scrollbar if text overflows vertically */
 }
 
 .imagebutton {
     border: 1px solid #dcdcdc;
     border-radius: 50px;
     margin-bottom: 20px !important;
+    padding: 5px;
     cursor: pointer;
     width: fit-content;
     margin: 0 auto;
