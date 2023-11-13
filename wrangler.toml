@@ -17,7 +17,7 @@ route = "sunny.sirenwatcher.dev/*"
 vars = {
   CLOUDFLARE_API_TOKEN = "So9029swrq67z_NvW61W3MYzyyUJrYjTH-IjMiiF"
   SUPABASE_URL = "https://tpogqybedqrbsgjoawxe.supabase.co",
-  SUPABASE_KEY = "process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA"
+  SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA"
 }
 
 # Define environment-specific variables for development
@@ -30,5 +30,5 @@ route = "sunny.sirenwatcher.dev/*"
 vars = {
   CLOUDFLARE_API_TOKEN = "So9029swrq67z_NvW61W3MYzyyUJrYjTH-IjMiiF"
   SUPABASE_URL = "https://tpogqybedqrbsgjoawxe.supabase.co",
-  SUPABASE_KEY = "process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA"
+  SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA"
 }
