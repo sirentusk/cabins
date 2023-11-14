@@ -39,7 +39,7 @@ try {
         $inclusionsString = implode(', ', $inclusions);
 
         // Prepare and execute the SQL statement
-        $sql = "INSERT INTO cabins (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO "Cabins" (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek, $inclusionsString]);
     }
