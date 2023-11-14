@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // Get the database connection details from environment variables
 $supabaseUrl = getenv('https://tpogqybedqrbsgjoawxe.supabase.co');
 $supabaseKey = getenv('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA');
