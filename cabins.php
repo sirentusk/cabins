@@ -60,26 +60,32 @@ try {
         // Check if a file has been uploaded
         if (isset($_FILES['cabinImage']) && $_FILES['cabinImage']['error'] == UPLOAD_ERR_OK) {
             $image = $_FILES['cabinImage'];
+            $imageSize = $_FILES['cabinImage']['size'];
             $imageType = strtolower(pathinfo($image['name'], PATHINFO_EXTENSION));
     
-            // Check if the file is one of the allowed types
-            $allowedTypes = ['jpg', 'jpeg', 'png', 'tiff', 'webp', 'svg', 'heif', 'heic'];
-            if (in_array($imageType, $allowedTypes)) {
-                $targetDirectory = "uploads/";
-                $newFileName = uniqid('cabin_', true) . '.' . $imageType;
-                $targetFile = $targetDirectory . $newFileName;
-    
-                // Move the uploaded file to the target directory
-                if (move_uploaded_file($image['tmp_name'], $targetFile)) {
-                    echo "Image uploaded successfully.";
-                    // Store the new file name in the database, not the original name from the user
-                    // $sql = "INSERT INTO cabins (image_path) VALUES (?)";
-                    // ... Execute database query to store image path ...
-                } else {
-                    echo "There was an error uploading the image.";
-                }
+            // Check if the file size is less than 5MB
+            if ($imageSize > 5000000) { // 5MB in bytes
+                echo "Error: Image size must be under 5MB.";
             } else {
-                echo "Invalid file type, please upload a jpg, jpeg, png, tiff, webp, svg, heif or heic file type.";
+                
+                // Check if the file is one of the allowed types
+                $allowedTypes = ['jpg', 'jpeg', 'png', 'tiff', 'webp', 'svg', 'heif', 'heic'];
+                if (in_array($imageType, $allowedTypes)) {
+                    $targetDirectory = "uploads/";
+                    $newFileName = uniqid('cabin_', true) . '.' . $imageType;
+                    $targetFile = $targetDirectory . $newFileName;
+
+                    // Move the uploaded file to the target directory
+                    if (move_uploaded_file($image['tmp_name'], $targetFile)) {
+                        echo "Image uploaded successfully.";
+                        // Store the new file name in the database, not the original name from the user
+                        // $sql = "INSERT INTO cabins (image_path) VALUES (?)";
+                        // ... Execute database query to store image path ...
+                    } else {
+                        echo "There was an error uploading the image.";
+                    }
+            } else {
+                echo "Invalid file type, please upload a jpg, jpeg, png, tiff, webp, svg, heif, or heic file type.";
             }
         }
 }
