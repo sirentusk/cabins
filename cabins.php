@@ -19,7 +19,7 @@ $password = $dbParams['pass'] ?? null;
 $port = $dbParams['port'] ?? null;
 
 // Set up the DSN (Data Source Name)
-$dsn = "pgsql:host=db.tpogqybedqrbsgjoawxe.supabase.co;port=5432;dbname=postgres;user=postgres;password=HomewardBound1234#;sslmode=require";
+$dsn = "pgsql:host=db.tpogqybedqrbsgjoawxe.supabase.co;port=5432;dbname=postgres;user=postgres;password=$password;sslmode=require";
 
 // Create a new PDO instance
 try {
