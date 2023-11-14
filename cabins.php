@@ -15,7 +15,7 @@ $dbParams = parse_url($supabaseUrl);
 $host = 'db.tpogqybedqrbsgjoawxe.supabase.co';
 $dbname = 'postgres';
 $user = 'postgres';
-$password = $dbParams['$password'];
+$password = getenv('DB_PASSWORD');
 $port = $dbParams['5432'];
 
 // Set up the DSN (Data Source Name)
