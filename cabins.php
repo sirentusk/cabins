@@ -78,7 +78,7 @@ try {
         }
 }
 
-} catch (PDOException $e) {
+catch (PDOException $e) {
     // Handle any database connection errors
     error_log("Connection failed: " . $e->getMessage());
     die("Connection failed: " . $e->getMessage());
