@@ -76,13 +76,12 @@ try {
                 echo "Invalid file type, please upload a jpg, jpeg, png, tiff, webp, svg, heif or heic file type.";
             }
         }
+}
 
 } catch (PDOException $e) {
     // Handle any database connection errors
     error_log("Connection failed: " . $e->getMessage());
     die("Connection failed: " . $e->getMessage());
-}
-
 }
 
 // Close the database connection if it's open
