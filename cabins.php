@@ -4,9 +4,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Supabase client setup (assuming you have already set this up)
-// require_once 'path/to/supabase-php-sdk/autoload.php';
-// $supabaseClient = new Supabase\SupabaseClient('your-supabase-url', 'your-supabase-key');
+Supabase client setup (assuming you have already set this up)
+require_once 'path/to/supabase-php-sdk/autoload.php';
+$supabaseClient = new Supabase\SupabaseClient('SUPABASE_URL', 'SUPABASE_KEY');
 
 // Database connection details
 $supabaseUrl = getenv('SUPABASE_URL');
@@ -53,13 +53,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $filePath = $folder . '/' . $newFileName;
 
                 // Supabase upload logic
-                // $response = $supabaseClient->storage()->getBucket($bucketName)->uploadFile($filePath, $image['tmp_name']);
+                $response = $supabaseClient->storage()->getBucket(cabins)->uploadFile($filePath, $image['tmp_name']);
 
-                // if ($response->isSuccess()) {
-                //     echo "Image uploaded successfully to Supabase.";
-                // } else {
-                //     echo "Failed to upload image to Supabase: " . $response->getMessage();
-                // }
+                if ($response->isSuccess()) {
+                    echo "Image uploaded successfully to Supabase.";
+                } else {
+                    echo "Failed to upload image to Supabase: " . $response->getMessage();
+                }
             } else {
                 echo "Invalid file type, please upload a jpg, jpeg, png, tiff, webp, svg, heif, or heic file type.";
             }
