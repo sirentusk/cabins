@@ -25,8 +25,18 @@ try {
     $pdo = new PDO($dsn);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Your database interaction goes here
-    // ...
+        // Check if the form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Collect and sanitize the form data
+        $cabinType = $_POST['cabinType']; // Sanitize this input
+        $description = $_POST['description']; // Sanitize this input
+        // ... [Other form data] ...
+
+        // Prepare and execute the SQL statement
+        $sql = "INSERT INTO your_table_name (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek, $inclusions]);
+    }
 
 } catch (PDOException $e) {
     // Handle any database connection errors
