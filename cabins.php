@@ -35,6 +35,9 @@ try {
             $pricePerWeek = $_POST['pricePerWeek'];
             $inclusions = $_POST['inclusions'];
 
+        // Convert the inclusions array to a string
+        $inclusionsString = implode(', ', $inclusions);
+
         // Prepare and execute the SQL statement
         $sql = "INSERT INTO Cabins (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
