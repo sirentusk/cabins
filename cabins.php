@@ -6,18 +6,20 @@ error_reporting(E_ALL);
 
 // Get the database connection details from environment variables
 $dbUrl = getenv('postgres://wxefzfbb:d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7@pom.db.elephantsql.com/wxefzfbb');
+$supabaseUrl = getenv('https://tpogqybedqrbsgjoawxe.supabase.co');
+$supabaseKey = getenv('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA');
 
 // Parse the URL to get the connection details
-$dbParams = parse_url($dbUrl);
+$dbParams = parse_url($supabaseUrl);
 
-$host = $dbParams['host']?? null;
+$host = $dbParams['host'] ?? null;
 $dbname = ltrim($dbParams['path'], '/');
 $user = $dbParams['user'] ?? null;
 $password = $dbParams['pass'] ?? null;
 $port = $dbParams['port'] ?? null;
 
 // Set up the DSN (Data Source Name)
-$dsn = "pgsql:host=pom.db.elephantsql.com;port=5432;dbname=wxefzfbb;user=wxefzfbbr;password=d4hNitJAkQaeiLfZXeAGonAyOw7zvjm7;sslmode=require";
+$dsn = "pgsql:host=db.tpogqybedqrbsgjoawxe.supabase.co;port=5432;dbname=postgres;user=postgres;password=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA;sslmode=require";
 
 // Create a new PDO instance
 try {
