@@ -36,7 +36,10 @@ try {
             $inclusions = $_POST['inclusions'];
 
         // Convert the inclusions array to a string
-        $inclusionsString = implode(', ', $inclusions);
+        $inclusionsString = '{' . implode(', ', array_map(function($inclusion) {
+        return '"' . addslashes($inclusion) . '"';
+        }, $inclusions)) . '}';
+
 
         // Prepare and execute the SQL statement
         $sql = "INSERT INTO \"Cabins\" (\"cabinType\", \"Description\", \"pricePerNight\", \"pricePerWeek\", \"Inclusions\") VALUES (?, ?, ?, ?, ?)";
