@@ -41,7 +41,7 @@ try {
         // Prepare and execute the SQL statement
         $sql = "INSERT INTO cabins (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek, $inclusions]);
+        $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek, $inclusionsString]);
     }
 
         // Handle the inclusions
