@@ -1,3 +1,5 @@
+# File for Cloudflare Workers
+
 name = "shrill-waterfall-93af"
 type = "javascript"
 account_id = "97afc6815240a28494592018118777f4"
@@ -30,6 +32,6 @@ route = "sunny.sirenwatcher.dev/*"
 # Environment variables for development
 vars = {
   CLOUDFLARE_API_TOKEN = "So9029swrq67z_NvW61W3MYzyyUJrYjTH-IjMiiF"
-  SUPABASE_URL = "https://tpogqybedqrbsgjoawxe.supabase.co",
+  SUPABASE_URL = "https://tpogqybedqrbsgjoawxe.supabase.co"
   SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwb2dxeWJlZHFyYnNnam9hd3hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk4ODA2NTEsImV4cCI6MjAxNTQ1NjY1MX0.F3XBYJ-V5_KoXVXKZ0sqgajSzfwPR5Oy1uerUp3bLjA"
-}
+  DB_PASSWORD = "HomewardBound1234#"}
