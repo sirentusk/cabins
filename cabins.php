@@ -33,7 +33,7 @@ try {
         // ... [Other form data] ...
 
         // Prepare and execute the SQL statement
-        $sql = "INSERT INTO your_table_name (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO Cabins (cabinType, description, pricePerNight, pricePerWeek, inclusions) VALUES (?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$cabinType, $description, $pricePerNight, $pricePerWeek, $inclusions]);
     }
