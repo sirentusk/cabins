@@ -16,7 +16,7 @@ $host = 'db.tpogqybedqrbsgjoawxe.supabase.co';
 $dbname = 'postgres';
 $user = 'postgres';
 $password = getenv('DB_PASSWORD');
-$port = $dbParams['5432'];
+$port = '5432';
 
 // Set up the DSN (Data Source Name)
 $dsn = "pgsql:host=db.tpogqybedqrbsgjoawxe.supabase.co;port=5432;dbname=postgres;user=postgres;password=$password;sslmode=require";
